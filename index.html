@@ -3,311 +3,387 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abinash Swain — Ninja Portfolio | Believe It!</title>
-  <meta name="description" content="Abinash Swain — 3rd Year B.Tech CSE (AI & ML) | Practical AI systems, RAG, Document AI, MCP Agents. Dattebayo!" />
+  <title>Abinash Swain — Ninja Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            ninja: {
-              bg: '#070B14',
-              card: '#0D1525',
-              border: '#1A2740',
-              orange: '#FF7A1A',
-              orangeDim: '#E56A0F',
-              cyan: '#22D8FF',
-              text: '#E2E8F0',
-              muted: '#94A3B8',
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['\"Segoe UI\"', 'system-ui', 'sans-serif'],
-          },
-          boxShadow: {
-            glow: '0 0 40px -10px rgba(255, 122, 26, 0.35)',
-            card: '0 8px 32px rgba(0,0,0,0.4)',
+            dark: '#060A12',
+            card: '#0C1424',
+            border: '#1C2A42',
+            orange: '#FF7A1A',
+            muted: '#8B9CB3',
+            text: '#E8EEF7'
           }
         }
       }
     }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { background: #070B14; color: #E2E8F0; }
+    body { background: #060A12; color: #E8EEF7; font-family: Inter, system-ui, sans-serif; }
     .glass {
-      background: linear-gradient(145deg, rgba(13,21,37,0.9), rgba(10,16,28,0.95));
-      border: 1px solid rgba(255,122,26,0.15);
-      backdrop-filter: blur(12px);
+      background: linear-gradient(160deg, rgba(12,20,36,0.95), rgba(8,14,26,0.98));
+      border: 1px solid rgba(255,122,26,0.12);
     }
-    .orange-glow { box-shadow: 0 0 25px -5px rgba(255,122,26,0.4); }
-    .skill-bar {
-      background: linear-gradient(90deg, #FF7A1A, #FF9F4A);
-    }
-    .mission-row:hover { background: rgba(255,122,26,0.06); }
-    .badge {
-      background: #0B1220;
-      border: 1px solid rgba(255,122,26,0.25);
-    }
-    .section-title {
-      letter-spacing: 0.08em;
+    .orange-glow { box-shadow: 0 0 30px -8px rgba(255,122,26,0.45); }
+    .skill-fill { background: linear-gradient(90deg, #FF7A1A, #FFA04A); }
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      font-size: 0.7rem;
       color: #FF7A1A;
       font-weight: 700;
     }
-    .hero-gradient {
-      background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(255,122,26,0.12), transparent 60%);
+    .pill {
+      background: #0A1220;
+      border: 1px solid rgba(255,122,26,0.22);
     }
+    .mission-row:hover { background: rgba(255,122,26,0.05); }
   </style>
 </head>
-<body class="font-sans antialiased min-h-screen">
+<body class="min-h-screen">
 
-  <!-- Top bar -->
-  <header class="sticky top-0 z-50 border-b border-ninja-border/60 bg-ninja-bg/80 backdrop-blur-md">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="text-ninja-orange text-xl">🍥</span>
-        <span class="font-bold tracking-tight">Abinash<span class="text-ninja-orange">.Swain</span></span>
+  <!-- TOP BAR -->
+  <header class="sticky top-0 z-50 border-b border-border/70 bg-dark/90 backdrop-blur-md">
+    <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="text-xl">🍥</span>
+        <span class="font-bold text-[15px]">Abinash<span class="text-orange">.Swain</span></span>
       </div>
-      <nav class="hidden sm:flex items-center gap-6 text-sm text-ninja-muted">
-        <a href="#missions" class="hover:text-ninja-orange transition">Missions</a>
-        <a href="#stats" class="hover:text-ninja-orange transition">Stats</a>
-        <a href="#join" class="hover:text-ninja-orange transition">Join Squad</a>
-      </nav>
-      <a href="https://github.com/abinash123hg" target="_blank" class="text-xs px-3 py-1.5 rounded-full border border-ninja-orange/40 text-ninja-orange hover:bg-ninja-orange/10 transition">
-        GitHub →
-      </a>
+      <div class="flex items-center gap-5 text-sm text-muted">
+        <a href="#missions" class="hover:text-orange transition hidden sm:block">Missions</a>
+        <a href="#stats" class="hover:text-orange transition hidden sm:block">Stats</a>
+        <a href="https://github.com/abinash123hg" target="_blank" class="text-xs px-3 py-1.5 rounded-full border border-orange/40 text-orange hover:bg-orange/10 transition">
+          GitHub →
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 pb-20">
+  <main class="max-w-5xl mx-auto px-4 pb-24">
 
-    <!-- HERO -->
-    <section class="relative pt-12 pb-16 hero-gradient">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <p class="section-title mb-3">Hidden Leaf · AI Division</p>
-          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-3">
-            Hi, I'm <span class="text-ninja-orange">Abinash Swain</span>
-          </h1>
-          <p class="text-ninja-muted text-lg mb-2">3rd Year B.Tech CSE (AI & ML) @ CUTM</p>
-          <p class="text-ninja-muted mb-6 max-w-md">
-            Data Analyst Intern @ InternPe · Building practical AI systems that actually work in the field.
-          </p>
-
-          <div class="flex flex-wrap gap-3 mb-8">
-            <a href="https://github.com/abinash123hg" target="_blank" class="px-5 py-2.5 rounded-lg bg-ninja-orange text-ninja-bg font-semibold text-sm hover:bg-ninja-orangeDim transition orange-glow">
-              GitHub Profile
-            </a>
-            <a href="https://www.linkedin.com/in/abinash-swain-a941a3330/" target="_blank" class="px-5 py-2.5 rounded-lg border border-ninja-border text-sm hover:border-ninja-orange/50 transition">
-              LinkedIn
-            </a>
-            <a href="mailto:swainabinash839@gmail.com" class="px-5 py-2.5 rounded-lg border border-ninja-border text-sm hover:border-ninja-orange/50 transition">
-              Email
-            </a>
-          </div>
-
-          <div class="flex flex-wrap gap-2 text-xs">
-            <span class="badge px-3 py-1 rounded-full">Python</span>
-            <span class="badge px-3 py-1 rounded-full">RAG</span>
-            <span class="badge px-3 py-1 rounded-full">MCP</span>
-            <span class="badge px-3 py-1 rounded-full">OCR</span>
-            <span class="badge px-3 py-1 rounded-full">Playwright</span>
-            <span class="badge px-3 py-1 rounded-full">ML</span>
-          </div>
-        </div>
-
-        <!-- Character card -->
-        <div class="relative flex justify-center lg:justify-end">
-          <div class="glass rounded-2xl p-6 shadow-card max-w-sm w-full relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-ninja-orange/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
-            <div class="relative z-10 text-center">
-              <div class="w-40 h-40 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-ninja-orange/20 to-transparent border border-ninja-orange/30 flex items-center justify-center overflow-hidden">
-                <!-- Male ninja placeholder - replace with your anime avatar -->
-                <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Abinash&backgroundColor=0B1220&clothing=hoodie&clothingColor=ff7a1a&hair=short01&hairColor=2c1b18&skinColor=edb98a" 
-                     alt="Abinash Ninja" class="w-full h-full object-cover" />
-              </div>
-              <h2 class="text-xl font-bold">Abinash Swain</h2>
-              <p class="text-ninja-orange text-sm mt-1">Genin → Chunin (AI Track)</p>
-              <p class="text-xs text-ninja-muted mt-3">Bhubaneswar, Odisha · CUTM</p>
-              <div class="mt-4 flex justify-center gap-3 text-xs">
-                <span class="px-2 py-1 rounded bg-ninja-orange/10 text-ninja-orange">RAG</span>
-                <span class="px-2 py-1 rounded bg-ninja-orange/10 text-ninja-orange">Agents</span>
-                <span class="px-2 py-1 rounded bg-ninja-orange/10 text-ninja-orange">Vision</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Believe it section -->
-    <section class="mb-16">
-      <div class="glass rounded-2xl p-6 sm:p-8 shadow-card">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="text-2xl">🍥</span>
+    <!-- ================= HERO (exact style of first screenshot) ================= -->
+    <section class="pt-12 pb-10">
+      <div class="glass rounded-2xl p-6 sm:p-8 relative overflow-hidden orange-glow">
+        <div class="absolute -right-10 -top-10 w-64 h-64 bg-orange/10 rounded-full blur-3xl"></div>
+        
+        <div class="relative grid md:grid-cols-[1fr_280px] gap-8 items-center">
+          <!-- Left content -->
           <div>
-            <p class="section-title">Core Philosophy</p>
-            <h3 class="text-xl font-bold">Believe it — start ship it</h3>
+            <p class="section-label mb-3">Hidden Leaf · AI Division</p>
+            <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-2">
+              Hi, I'm <span class="text-orange">Abinash Swain</span>
+            </h1>
+            <p class="text-muted text-[15px] mb-1">3rd Year B.Tech CSE (AI & ML) @ CUTM</p>
+            <p class="text-muted text-sm mb-6 max-w-md leading-relaxed">
+              Data Analyst Intern @ InternPe · Building practical AI systems that ship.
+            </p>
+
+            <div class="flex flex-wrap gap-2.5 mb-6">
+              <a href="https://github.com/abinash123hg" target="_blank" class="px-4 py-2 rounded-lg bg-orange text-dark text-sm font-semibold hover:brightness-110 transition">
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/abinash-swain-a941a3330/" target="_blank" class="px-4 py-2 rounded-lg border border-border text-sm hover:border-orange/40 transition">
+                LinkedIn
+              </a>
+              <a href="mailto:swainabinash839@gmail.com" class="px-4 py-2 rounded-lg border border-border text-sm hover:border-orange/40 transition">
+                Email
+              </a>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="pill text-xs px-3 py-1 rounded-full">Python</span>
+              <span class="pill text-xs px-3 py-1 rounded-full">RAG</span>
+              <span class="pill text-xs px-3 py-1 rounded-full">MCP</span>
+              <span class="pill text-xs px-3 py-1 rounded-full">OCR</span>
+              <span class="pill text-xs px-3 py-1 rounded-full">Playwright</span>
+            </div>
+          </div>
+
+          <!-- Right: Male anime character card (popular boy style) -->
+          <div class="flex justify-center md:justify-end">
+            <div class="relative">
+              <div class="w-56 h-64 sm:w-64 sm:h-72 rounded-2xl overflow-hidden border border-orange/25 bg-gradient-to-b from-orange/10 to-transparent relative">
+                <!-- Popular anime boy look (Naruto-inspired male ninja) -->
+                <img 
+                  src="https://api.dicebear.com/9.x/notionists/svg?seed=AbinashNinjaBoy&backgroundColor=0c1424&scale=95" 
+                  alt="Abinash Ninja" 
+                  class="w-full h-full object-cover object-top"
+                />
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/95 to-transparent p-3">
+                  <p class="text-sm font-bold">Abinash Swain</p>
+                  <p class="text-[11px] text-orange">Genin → Chunin · AI Track</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div class="space-y-4 text-sm text-ninja-muted">
-            <p class="flex gap-3">
-              <span class="text-ninja-orange mt-0.5">▸</span>
-              <span>I walk the path of practical AI: Retrieval-Augmented Generation with real evidence, not hallucinated answers.</span>
-            </p>
-            <p class="flex gap-3">
-              <span class="text-ninja-orange mt-0.5">▸</span>
-              <span>Document AI that understands handwritten & scanned pages with page-level citations.</span>
-            </p>
-            <p class="flex gap-3">
-              <span class="text-ninja-orange mt-0.5">▸</span>
-              <span>Tool-using agents via MCP + reliable browser automation with Playwright and safety logs.</span>
-            </p>
-            <p class="flex gap-3">
-              <span class="text-ninja-orange mt-0.5">▸</span>
+      </div>
+    </section>
+
+    <!-- ================= BELIEVE IT — START SHIP IT (exact style) ================= -->
+    <section class="mb-8">
+      <div class="glass rounded-2xl p-6 relative overflow-hidden">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="flex -space-x-3">
+            <div class="w-10 h-10 rounded-full bg-orange/20 border-2 border-dark flex items-center justify-center text-lg">🦊</div>
+            <div class="w-10 h-10 rounded-full bg-orange/30 border-2 border-dark flex items-center justify-center text-lg">⚡</div>
+          </div>
+          <div>
+            <p class="section-label">Core Philosophy</p>
+            <h2 class="text-lg font-bold">Believe it — start ship it</h2>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-[1fr_auto] gap-6 items-start">
+          <ul class="space-y-3 text-sm text-muted">
+            <li class="flex gap-2.5">
+              <span class="text-orange mt-0.5 shrink-0">▸</span>
+              <span>Retrieval-Augmented Generation with real evidence — no hallucinated answers.</span>
+            </li>
+            <li class="flex gap-2.5">
+              <span class="text-orange mt-0.5 shrink-0">▸</span>
+              <span>Document AI that reads handwritten & scanned pages with page-level citations.</span>
+            </li>
+            <li class="flex gap-2.5">
+              <span class="text-orange mt-0.5 shrink-0">▸</span>
+              <span>Tool-using agents via MCP + Playwright browser automation with safety logs.</span>
+            </li>
+            <li class="flex gap-2.5">
+              <span class="text-orange mt-0.5 shrink-0">▸</span>
               <span>Not just demos. Real jutsu that works in the field.</span>
-            </p>
-          </div>
-          <div class="flex justify-center gap-4">
-            <div class="w-28 h-36 rounded-xl bg-ninja-card border border-ninja-border flex items-center justify-center text-4xl">🦊</div>
-            <div class="w-28 h-36 rounded-xl bg-ninja-card border border-ninja-orange/30 flex items-center justify-center text-4xl orange-glow">⚡</div>
-          </div>
-        </div>
-      </div>
-    </section>
+            </li>
+          </ul>
 
-    <!-- Tools -->
-    <section class="mb-16">
-      <div class="glass rounded-2xl p-6 sm:p-8 shadow-card relative overflow-hidden">
-        <div class="absolute right-0 top-0 w-64 h-full bg-gradient-to-l from-ninja-orange/5 to-transparent pointer-events-none"></div>
-        <p class="section-title mb-2">Arsenal</p>
-        <h3 class="text-xl font-bold mb-6">Tools I fight with</h3>
-        <div class="flex flex-wrap gap-3">
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">Python</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">JavaScript / TypeScript</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">RAG + LangChain</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">MCP</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">Playwright</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">OCR / Document AI</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">PyTorch / Deep Learning</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">Streamlit</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">React + Tailwind</span>
-          <span class="badge px-4 py-2 rounded-lg text-sm font-medium">Git / GitHub</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats from the field -->
-    <section id="stats" class="mb-16">
-      <p class="section-title mb-2">Field Report</p>
-      <h3 class="text-xl font-bold mb-6">Stats from the field</h3>
-      <div class="grid lg:grid-cols-3 gap-6">
-        <!-- ID Card -->
-        <div class="glass rounded-2xl p-5 shadow-card">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-xl bg-ninja-orange/20 border border-ninja-orange/40 flex items-center justify-center text-2xl">🥷</div>
-            <div>
-              <p class="text-xs text-ninja-muted">NINJA ID</p>
-              <h4 class="font-bold">Abinash Swain</h4>
-              <p class="text-xs text-ninja-orange">AI & ML Specialist</p>
+          <!-- Two character placeholders like the screenshot -->
+          <div class="flex gap-3 justify-center sm:justify-end">
+            <div class="w-24 h-32 rounded-xl bg-card border border-border flex flex-col items-center justify-center gap-1">
+              <span class="text-3xl">🦊</span>
+              <span class="text-[10px] text-muted">Naruto</span>
             </div>
-          </div>
-          <div class="space-y-2 text-xs">
-            <div class="flex justify-between"><span class="text-ninja-muted">Village</span><span>Bhubaneswar</span></div>
-            <div class="flex justify-between"><span class="text-ninja-muted">Rank</span><span>Genin → Chunin</span></div>
-            <div class="flex justify-between"><span class="text-ninja-muted">Affiliation</span><span>CUTM · InternPe</span></div>
-            <div class="flex justify-between"><span class="text-ninja-muted">Specialty</span><span>RAG / Agents</span></div>
-          </div>
-        </div>
-
-        <!-- Skill bars -->
-        <div class="glass rounded-2xl p-5 shadow-card lg:col-span-2">
-          <p class="text-sm font-medium mb-4">Combat Readiness</p>
-          <div class="space-y-4">
-            <div>
-              <div class="flex justify-between text-xs mb-1"><span>Python & ML</span><span>92%</span></div>
-              <div class="h-2 bg-ninja-border rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width:92%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between text-xs mb-1"><span>RAG & Document AI</span><span>88%</span></div>
-              <div class="h-2 bg-ninja-border rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width:88%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between text-xs mb-1"><span>Agents & MCP</span><span>85%</span></div>
-              <div class="h-2 bg-ninja-border rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width:85%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between text-xs mb-1"><span>Frontend / React</span><span>78%</span></div>
-              <div class="h-2 bg-ninja-border rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width:78%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between text-xs mb-1"><span>Data Analysis</span><span>90%</span></div>
-              <div class="h-2 bg-ninja-border rounded-full overflow-hidden"><div class="skill-bar h-full rounded-full" style="width:90%"></div></div>
+            <div class="w-24 h-32 rounded-xl bg-card border border-orange/30 flex flex-col items-center justify-center gap-1 orange-glow">
+              <span class="text-3xl">🥷</span>
+              <span class="text-[10px] text-orange">You</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- S-Rank Missions -->
-    <section id="missions" class="mb-16">
-      <div class="flex items-center justify-between mb-6">
+    <!-- ================= TOOLS I FIGHT WITH ================= -->
+    <section class="mb-8">
+      <div class="glass rounded-2xl p-6 relative overflow-hidden">
+        <!-- Spotlight effect like the screenshot -->
+        <div class="absolute right-0 top-0 w-72 h-full bg-gradient-to-l from-orange/8 via-transparent to-transparent pointer-events-none"></div>
+        
+        <div class="relative">
+          <p class="section-label mb-1">Arsenal</p>
+          <h2 class="text-lg font-bold mb-5">Tools I fight with</h2>
+          
+          <div class="flex flex-wrap gap-2.5">
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">Python</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">JavaScript</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">TypeScript</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">RAG / LangChain</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">MCP</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">Playwright</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">OCR / Document AI</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">PyTorch</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">Streamlit</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">React</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">Tailwind</span>
+            <span class="pill px-3.5 py-1.5 rounded-lg text-sm">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS FROM THE FIELD ================= -->
+    <section id="stats" class="mb-10">
+      <p class="section-label mb-1">Field Report</p>
+      <h2 class="text-lg font-bold mb-5">Stats from the field</h2>
+
+      <div class="grid lg:grid-cols-[280px_1fr] gap-5">
+        <!-- ID Card (left) -->
+        <div class="glass rounded-2xl p-5">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-14 h-14 rounded-xl bg-orange/15 border border-orange/30 flex items-center justify-center text-2xl">
+              🥷
+            </div>
+            <div>
+              <p class="text-[10px] text-muted tracking-wider">NINJA ID</p>
+              <p class="font-bold text-[15px]">Abinash Swain</p>
+              <p class="text-xs text-orange">AI & ML Specialist</p>
+            </div>
+          </div>
+
+          <div class="space-y-2.5 text-xs">
+            <div class="flex justify-between py-1.5 border-b border-border/60">
+              <span class="text-muted">Village</span>
+              <span>Bhubaneswar</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-border/60">
+              <span class="text-muted">Rank</span>
+              <span>Genin → Chunin</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-border/60">
+              <span class="text-muted">Affiliation</span>
+              <span>CUTM · InternPe</span>
+            </div>
+            <div class="flex justify-between py-1.5">
+              <span class="text-muted">Specialty</span>
+              <span>RAG / Agents</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill bars + combat log style -->
+        <div class="glass rounded-2xl p-5">
+          <p class="text-sm font-semibold mb-4">Combat Readiness</p>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <span>Python & Machine Learning</span>
+                <span class="text-orange">92%</span>
+              </div>
+              <div class="h-2 bg-border rounded-full overflow-hidden">
+                <div class="skill-fill h-full rounded-full" style="width:92%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <span>RAG & Document AI</span>
+                <span class="text-orange">88%</span>
+              </div>
+              <div class="h-2 bg-border rounded-full overflow-hidden">
+                <div class="skill-fill h-full rounded-full" style="width:88%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <span>Agents & MCP</span>
+                <span class="text-orange">85%</span>
+              </div>
+              <div class="h-2 bg-border rounded-full overflow-hidden">
+                <div class="skill-fill h-full rounded-full" style="width:85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <span>Data Analysis & Storytelling</span>
+                <span class="text-orange">90%</span>
+              </div>
+              <div class="h-2 bg-border rounded-full overflow-hidden">
+                <div class="skill-fill h-full rounded-full" style="width:90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1.5">
+                <span>Frontend (React + Tailwind)</span>
+                <span class="text-orange">78%</span>
+              </div>
+              <div class="h-2 bg-border rounded-full overflow-hidden">
+                <div class="skill-fill h-full rounded-full" style="width:78%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-border/60">
+            <p class="text-[11px] text-muted mb-2">Recent Combat Log</p>
+            <div class="space-y-1.5 text-xs">
+              <div class="flex justify-between">
+                <span class="text-muted">RAG Vision AI Assistant</span>
+                <span class="text-green-400">Completed</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted">MCP WebPilot</span>
+                <span class="text-green-400">Active</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-muted">SafeDrive AI</span>
+                <span class="text-green-400">Deployed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= S-RANK MISSIONS (exact table style) ================= -->
+    <section id="missions" class="mb-10">
+      <div class="flex items-center justify-between mb-5">
         <div>
-          <p class="section-title mb-1">Mission Log</p>
-          <h3 class="text-xl font-bold">S-Rank Missions</h3>
+          <p class="section-label mb-0.5">Mission Log</p>
+          <h2 class="text-lg font-bold">S-Rank Missions</h2>
         </div>
-        <a href="https://github.com/abinash123hg?tab=repositories" target="_blank" class="text-sm text-ninja-orange hover:underline">All Missions →</a>
+        <a href="https://github.com/abinash123hg?tab=repositories" target="_blank" class="text-sm text-orange hover:underline">
+          All Missions →
+        </a>
       </div>
 
-      <div class="glass rounded-2xl overflow-hidden shadow-card">
+      <div class="glass rounded-2xl overflow-hidden">
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
             <thead>
-              <tr class="border-b border-ninja-border text-left text-ninja-muted text-xs uppercase tracking-wider">
-                <th class="px-5 py-4 font-medium">Mission</th>
-                <th class="px-5 py-4 font-medium hidden sm:table-cell">Description</th>
-                <th class="px-5 py-4 font-medium">Jutsu</th>
-                <th class="px-5 py-4 font-medium text-right">Status</th>
+              <tr class="border-b border-border text-left">
+                <th class="px-5 py-3.5 text-[11px] uppercase tracking-wider text-muted font-medium">Mission</th>
+                <th class="px-5 py-3.5 text-[11px] uppercase tracking-wider text-muted font-medium hidden md:table-cell">Description</th>
+                <th class="px-5 py-3.5 text-[11px] uppercase tracking-wider text-muted font-medium">Jutsu</th>
+                <th class="px-5 py-3.5 text-[11px] uppercase tracking-wider text-muted font-medium text-right">Status</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="mission-row border-b border-ninja-border/50">
+              <tr class="mission-row border-b border-border/40">
                 <td class="px-5 py-4">
-                  <a href="https://github.com/abinash123hg/retrieval-augmented-vision-ai-assistant" target="_blank" class="font-medium text-ninja-orange hover:underline">RAG Vision AI Assistant</a>
+                  <a href="https://github.com/abinash123hg/retrieval-augmented-vision-ai-assistant" target="_blank" class="font-medium text-orange hover:underline">
+                    RAG Vision AI Assistant
+                  </a>
                 </td>
-                <td class="px-5 py-4 text-ninja-muted hidden sm:table-cell">Local RAG + OCR with page-level citations</td>
-                <td class="px-5 py-4"><span class="text-xs">Python · RAG · OCR</span></td>
-                <td class="px-5 py-4 text-right"><span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+                <td class="px-5 py-4 text-muted hidden md:table-cell">Local RAG + OCR with page-level citations</td>
+                <td class="px-5 py-4 text-xs">Python · RAG · OCR</td>
+                <td class="px-5 py-4 text-right">
+                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span>
+                </td>
               </tr>
-              <tr class="mission-row border-b border-ninja-border/50">
+              <tr class="mission-row border-b border-border/40">
                 <td class="px-5 py-4">
-                  <a href="https://github.com/abinash123hg/MCP-" target="_blank" class="font-medium text-ninja-orange hover:underline">MCP WebPilot</a>
+                  <a href="https://github.com/abinash123hg/MCP-" target="_blank" class="font-medium text-orange hover:underline">
+                    MCP WebPilot
+                  </a>
                 </td>
-                <td class="px-5 py-4 text-ninja-muted hidden sm:table-cell">Browser agent + MCP + Playwright + safety logs</td>
-                <td class="px-5 py-4"><span class="text-xs">MCP · Playwright</span></td>
-                <td class="px-5 py-4 text-right"><span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+                <td class="px-5 py-4 text-muted hidden md:table-cell">Browser agent + MCP + Playwright + safety logs</td>
+                <td class="px-5 py-4 text-xs">MCP · Playwright</td>
+                <td class="px-5 py-4 text-right">
+                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span>
+                </td>
               </tr>
-              <tr class="mission-row border-b border-ninja-border/50">
+              <tr class="mission-row border-b border-border/40">
                 <td class="px-5 py-4">
-                  <a href="https://github.com/abinash123hg/document-understanding-agent" target="_blank" class="font-medium text-ninja-orange hover:underline">Document Understanding Agent</a>
+                  <a href="https://github.com/abinash123hg/document-understanding-agent" target="_blank" class="font-medium text-orange hover:underline">
+                    Document Understanding Agent
+                  </a>
                 </td>
-                <td class="px-5 py-4 text-ninja-muted hidden sm:table-cell">Handwritten & scanned document Q&A</td>
-                <td class="px-5 py-4"><span class="text-xs">Python · OCR · RAG</span></td>
-                <td class="px-5 py-4 text-right"><span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+                <td class="px-5 py-4 text-muted hidden md:table-cell">Handwritten & scanned document Q&A</td>
+                <td class="px-5 py-4 text-xs">Python · OCR · RAG</td>
+                <td class="px-5 py-4 text-right">
+                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span>
+                </td>
               </tr>
               <tr class="mission-row">
                 <td class="px-5 py-4">
-                  <a href="https://github.com/abinash123hg/SafeDrive-AI-Real-Time-Road-Safety-Accident-Hotspot-Prediction-System" target="_blank" class="font-medium text-ninja-orange hover:underline">SafeDrive AI</a>
+                  <a href="https://github.com/abinash123hg/SafeDrive-AI-Real-Time-Road-Safety-Accident-Hotspot-Prediction-System" target="_blank" class="font-medium text-orange hover:underline">
+                    SafeDrive AI
+                  </a>
                 </td>
-                <td class="px-5 py-4 text-ninja-muted hidden sm:table-cell">Real-time accident hotspot prediction</td>
-                <td class="px-5 py-4"><span class="text-xs">Python · ML · Streamlit</span></td>
-                <td class="px-5 py-4 text-right"><span class="text-xs px-2 py-1 rounded-full bg-green-500/10 text-green-400">Active</span></td>
+                <td class="px-5 py-4 text-muted hidden md:table-cell">Real-time accident hotspot prediction</td>
+                <td class="px-5 py-4 text-xs">Python · ML · Streamlit</td>
+                <td class="px-5 py-4 text-right">
+                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Deployed</span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -315,47 +391,63 @@
       </div>
     </section>
 
-    <!-- Contribution Village -->
-    <section class="mb-16">
-      <p class="section-title mb-2">Village Report</p>
-      <h3 class="text-xl font-bold mb-6">My Contribution Village</h3>
-      <div class="glass rounded-2xl p-6 shadow-card">
-        <p class="text-sm text-ninja-muted mb-4 text-center">Every commit raises another building. Slowly. Automatically. Every day.</p>
-        <div class="flex justify-center mb-6">
-          <img src="https://github-readme-activity-graph.vercel.app/graph?username=abinash123hg&theme=react-dark&bg_color=070B14&color=FF7A1A&line=FF7A1A&point=FFFFFF&area=true&hide_border=true" 
-               alt="Contribution Graph" class="w-full max-w-3xl rounded-lg" />
+    <!-- ================= CONTRIBUTION VILLAGE ================= -->
+    <section class="mb-10">
+      <p class="section-label mb-1">Village Report</p>
+      <h2 class="text-lg font-bold mb-5">My Contribution Village</h2>
+
+      <div class="glass rounded-2xl p-6">
+        <p class="text-sm text-muted text-center mb-5">
+          Every commit raises another building. Slowly. Automatically. Every day.
+        </p>
+
+        <div class="mb-6">
+          <img 
+            src="https://github-readme-activity-graph.vercel.app/graph?username=abinash123hg&theme=react-dark&bg_color=060A12&color=FF7A1A&line=FF7A1A&point=FFFFFF&area=true&hide_border=true" 
+            alt="Contribution Graph" 
+            class="w-full rounded-xl"
+          />
         </div>
-        <div class="grid sm:grid-cols-2 gap-6">
+
+        <div class="grid sm:grid-cols-2 gap-5">
           <div class="flex justify-center">
-            <img src="https://github-readme-stats.vercel.app/api?username=abinash123hg&show_icons=true&theme=radical&hide_border=true&bg_color=0D1525&title_color=FF7A1A&icon_color=FF7A1A&text_color=E2E8F0" 
-                 alt="GitHub Stats" class="rounded-xl" />
+            <img 
+              src="https://github-readme-stats.vercel.app/api?username=abinash123hg&show_icons=true&theme=radical&hide_border=true&bg_color=0C1424&title_color=FF7A1A&icon_color=FF7A1A&text_color=E8EEF7" 
+              alt="GitHub Stats" 
+              class="rounded-xl max-w-full"
+            />
           </div>
           <div class="flex justify-center">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abinash123hg&layout=compact&theme=radical&hide_border=true&bg_color=0D1525&title_color=FF7A1A&text_color=E2E8F0" 
-                 alt="Top Languages" class="rounded-xl" />
+            <img 
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=abinash123hg&layout=compact&theme=radical&hide_border=true&bg_color=0C1424&title_color=FF7A1A&text_color=E8EEF7" 
+              alt="Top Languages" 
+              class="rounded-xl max-w-full"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section id="join" class="mb-10">
-      <div class="glass rounded-2xl p-8 sm:p-10 text-center shadow-card relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-ninja-orange/5 via-transparent to-transparent pointer-events-none"></div>
-        <div class="relative z-10">
-          <p class="section-title mb-3">Call to Action</p>
-          <h3 class="text-2xl sm:text-3xl font-bold mb-3">Let's build something legendary</h3>
-          <p class="text-ninja-muted max-w-md mx-auto mb-8">
-            Looking for collaborators, internships, or just want to talk AI systems? Hit me up.
+    <!-- ================= LET'S BUILD SOMETHING LEGENDARY ================= -->
+    <section class="mb-8">
+      <div class="glass rounded-2xl p-8 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-orange/8 via-transparent to-transparent pointer-events-none"></div>
+        
+        <div class="relative">
+          <p class="section-label mb-2">Call to Action</p>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-3">Let's build something legendary</h2>
+          <p class="text-muted text-sm max-w-md mx-auto mb-7">
+            Looking for collaborators, internships, or just want to talk practical AI systems? Reach out.
           </p>
+          
           <div class="flex flex-wrap justify-center gap-3">
-            <a href="https://github.com/abinash123hg" target="_blank" class="px-6 py-3 rounded-lg bg-ninja-orange text-ninja-bg font-semibold text-sm hover:bg-ninja-orangeDim transition orange-glow">
+            <a href="https://github.com/abinash123hg" target="_blank" class="px-6 py-2.5 rounded-lg bg-orange text-dark font-semibold text-sm hover:brightness-110 transition orange-glow">
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/abinash-swain-a941a3330/" target="_blank" class="px-6 py-3 rounded-lg border border-ninja-border text-sm hover:border-ninja-orange/50 transition">
+            <a href="https://www.linkedin.com/in/abinash-swain-a941a3330/" target="_blank" class="px-6 py-2.5 rounded-lg border border-border text-sm hover:border-orange/40 transition">
               LinkedIn
             </a>
-            <a href="mailto:swainabinash839@gmail.com" class="px-6 py-3 rounded-lg border border-ninja-border text-sm hover:border-ninja-orange/50 transition">
+            <a href="mailto:swainabinash839@gmail.com" class="px-6 py-2.5 rounded-lg border border-border text-sm hover:border-orange/40 transition">
               Email Me
             </a>
           </div>
@@ -363,13 +455,14 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-xs text-ninja-muted pt-8 border-t border-ninja-border/40">
-      <p class="mb-2"><span class="text-ninja-orange">Dattebayo</span> — keep coding, keep growing. 🍥</p>
-      <p>November 2026 · Abinash Swain · Built with belief</p>
+    <!-- FOOTER -->
+    <footer class="text-center pt-6 border-t border-border/50">
+      <p class="text-sm mb-1">
+        <span class="text-orange font-medium">Dattebayo</span> — keep coding, keep growing. 🍥
+      </p>
+      <p class="text-xs text-muted">November 2026 · Abinash Swain</p>
     </footer>
 
   </main>
-
 </body>
 </html>
