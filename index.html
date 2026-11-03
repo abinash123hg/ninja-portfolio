@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abinash Swain — Ninja Portfolio</title>
+  <title>Abinash Swain — Ninja Portfolio | Believe It!</title>
+  <meta name="description" content="Abinash Swain — 3rd Year B.Tech CSE (AI & ML) | Practical AI, RAG, Document AI, MCP Agents. Dattebayo!" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -23,12 +24,13 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body { background: #060A12; color: #E8EEF7; font-family: Inter, system-ui, sans-serif; }
     .glass {
-      background: linear-gradient(160deg, rgba(12,20,36,0.95), rgba(8,14,26,0.98));
-      border: 1px solid rgba(255,122,26,0.12);
+      background: linear-gradient(160deg, rgba(12,20,36,0.96), rgba(8,14,26,0.98));
+      border: 1px solid rgba(255,122,26,0.13);
     }
-    .orange-glow { box-shadow: 0 0 30px -8px rgba(255,122,26,0.45); }
+    .orange-glow { box-shadow: 0 0 32px -8px rgba(255,122,26,0.42); }
     .skill-fill { background: linear-gradient(90deg, #FF7A1A, #FFA04A); }
     .section-label {
       font-size: 11px;
@@ -42,6 +44,9 @@
       border: 1px solid rgba(255,122,26,0.22);
     }
     .mission-row:hover { background: rgba(255,122,26,0.05); }
+    .char-card {
+      background: linear-gradient(180deg, rgba(255,122,26,0.08) 0%, transparent 60%);
+    }
   </style>
 </head>
 <body class="min-h-screen">
@@ -56,7 +61,7 @@
       <div class="flex items-center gap-5 text-sm text-muted">
         <a href="#missions" class="hover:text-orange transition hidden sm:block">Missions</a>
         <a href="#stats" class="hover:text-orange transition hidden sm:block">Stats</a>
-        <a href="https://github.com/abinash123hg" target="_blank" class="text-xs px-3 py-1.5 rounded-full border border-orange/40 text-orange hover:bg-orange/10 transition">
+        <a href="https://github.com/abinash123hg" target="_blank" rel="noopener" class="text-xs px-3 py-1.5 rounded-full border border-orange/40 text-orange hover:bg-orange/10 transition">
           GitHub →
         </a>
       </div>
@@ -65,13 +70,12 @@
 
   <main class="max-w-5xl mx-auto px-4 pb-24">
 
-    <!-- ================= HERO (exact style of first screenshot) ================= -->
-    <section class="pt-12 pb-10">
+    <!-- ================= HERO ================= -->
+    <section class="pt-12 pb-8">
       <div class="glass rounded-2xl p-6 sm:p-8 relative overflow-hidden orange-glow">
-        <div class="absolute -right-10 -top-10 w-64 h-64 bg-orange/10 rounded-full blur-3xl"></div>
+        <div class="absolute -right-16 -top-16 w-72 h-72 bg-orange/10 rounded-full blur-3xl pointer-events-none"></div>
         
-        <div class="relative grid md:grid-cols-[1fr_280px] gap-8 items-center">
-          <!-- Left content -->
+        <div class="relative grid md:grid-cols-[1fr_260px] gap-8 items-center">
           <div>
             <p class="section-label mb-3">Hidden Leaf · AI Division</p>
             <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-2">
@@ -83,10 +87,10 @@
             </p>
 
             <div class="flex flex-wrap gap-2.5 mb-6">
-              <a href="https://github.com/abinash123hg" target="_blank" class="px-4 py-2 rounded-lg bg-orange text-dark text-sm font-semibold hover:brightness-110 transition">
+              <a href="https://github.com/abinash123hg" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-orange text-dark text-sm font-semibold hover:brightness-110 transition">
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/abinash-swain-a941a3330/" target="_blank" class="px-4 py-2 rounded-lg border border-border text-sm hover:border-orange/40 transition">
+              <a href="https://www.linkedin.com/in/abinash-swain-a941a3330/" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-border text-sm hover:border-orange/40 transition">
                 LinkedIn
               </a>
               <a href="mailto:swainabinash839@gmail.com" class="px-4 py-2 rounded-lg border border-border text-sm hover:border-orange/40 transition">
@@ -103,38 +107,36 @@
             </div>
           </div>
 
-          <!-- Right: Male anime character card (popular boy style) -->
+          <!-- Male character card -->
           <div class="flex justify-center md:justify-end">
-            <div class="relative">
-              <div class="w-56 h-64 sm:w-64 sm:h-72 rounded-2xl overflow-hidden border border-orange/25 bg-gradient-to-b from-orange/10 to-transparent relative">
-                <!-- Popular anime boy look (Naruto-inspired male ninja) -->
-                <img 
-                  src="https://api.dicebear.com/9.x/notionists/svg?seed=AbinashNinjaBoy&backgroundColor=0c1424&scale=95" 
-                  alt="Abinash Ninja" 
-                  class="w-full h-full object-cover object-top"
-                />
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-dark/95 to-transparent p-3">
-                  <p class="text-sm font-bold">Abinash Swain</p>
-                  <p class="text-[11px] text-orange">Genin → Chunin · AI Track</p>
+            <div class="w-52 h-64 sm:w-56 sm:h-72 rounded-2xl overflow-hidden border border-orange/25 char-card relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                  <div class="w-28 h-28 mx-auto mb-3 rounded-2xl bg-orange/15 border border-orange/30 flex items-center justify-center text-5xl">
+                    🥷
+                  </div>
+                  <p class="font-bold text-sm">Abinash Swain</p>
+                  <p class="text-[11px] text-orange mt-0.5">Genin → Chunin · AI</p>
                 </div>
               </div>
+              <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-dark/80 to-transparent"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= BELIEVE IT — START SHIP IT (exact style) ================= -->
-    <section class="mb-8">
-      <div class="glass rounded-2xl p-6 relative overflow-hidden">
+    <!-- ================= BELIEVE IT — START SHIP IT ================= -->
+    <section class="mb-7">
+      <div class="glass rounded-2xl p-6">
         <div class="flex items-center gap-3 mb-5">
-          <div class="flex -space-x-3">
-            <div class="w-10 h-10 rounded-full bg-orange/20 border-2 border-dark flex items-center justify-center text-lg">🦊</div>
-            <div class="w-10 h-10 rounded-full bg-orange/30 border-2 border-dark flex items-center justify-center text-lg">⚡</div>
+          <div class="flex -space-x-2.5">
+            <div class="w-9 h-9 rounded-full bg-orange/20 border-2 border-dark flex items-center justify-center text-base">🦊</div>
+            <div class="w-9 h-9 rounded-full bg-orange/30 border-2 border-dark flex items-center justify-center text-base">⚡</div>
           </div>
           <div>
             <p class="section-label">Core Philosophy</p>
-            <h2 class="text-lg font-bold">Believe it — start ship it</h2>
+            <h2 class="text-lg font-bold leading-tight">Believe it — start ship it</h2>
           </div>
         </div>
 
@@ -158,14 +160,13 @@
             </li>
           </ul>
 
-          <!-- Two character placeholders like the screenshot -->
-          <div class="flex gap-3 justify-center sm:justify-end">
-            <div class="w-24 h-32 rounded-xl bg-card border border-border flex flex-col items-center justify-center gap-1">
-              <span class="text-3xl">🦊</span>
+          <div class="flex gap-3 justify-center sm:justify-end shrink-0">
+            <div class="w-20 h-28 rounded-xl bg-card border border-border flex flex-col items-center justify-center gap-1">
+              <span class="text-2xl">🦊</span>
               <span class="text-[10px] text-muted">Naruto</span>
             </div>
-            <div class="w-24 h-32 rounded-xl bg-card border border-orange/30 flex flex-col items-center justify-center gap-1 orange-glow">
-              <span class="text-3xl">🥷</span>
+            <div class="w-20 h-28 rounded-xl bg-card border border-orange/30 flex flex-col items-center justify-center gap-1 orange-glow">
+              <span class="text-2xl">🥷</span>
               <span class="text-[10px] text-orange">You</span>
             </div>
           </div>
@@ -174,15 +175,12 @@
     </section>
 
     <!-- ================= TOOLS I FIGHT WITH ================= -->
-    <section class="mb-8">
+    <section class="mb-7">
       <div class="glass rounded-2xl p-6 relative overflow-hidden">
-        <!-- Spotlight effect like the screenshot -->
-        <div class="absolute right-0 top-0 w-72 h-full bg-gradient-to-l from-orange/8 via-transparent to-transparent pointer-events-none"></div>
-        
+        <div class="absolute right-0 top-0 w-64 h-full bg-gradient-to-l from-orange/7 via-transparent to-transparent pointer-events-none"></div>
         <div class="relative">
           <p class="section-label mb-1">Arsenal</p>
           <h2 class="text-lg font-bold mb-5">Tools I fight with</h2>
-          
           <div class="flex flex-wrap gap-2.5">
             <span class="pill px-3.5 py-1.5 rounded-lg text-sm">Python</span>
             <span class="pill px-3.5 py-1.5 rounded-lg text-sm">JavaScript</span>
@@ -202,12 +200,12 @@
     </section>
 
     <!-- ================= STATS FROM THE FIELD ================= -->
-    <section id="stats" class="mb-10">
+    <section id="stats" class="mb-9">
       <p class="section-label mb-1">Field Report</p>
       <h2 class="text-lg font-bold mb-5">Stats from the field</h2>
 
-      <div class="grid lg:grid-cols-[280px_1fr] gap-5">
-        <!-- ID Card (left) -->
+      <div class="grid lg:grid-cols-[270px_1fr] gap-5">
+        <!-- ID Card -->
         <div class="glass rounded-2xl p-5">
           <div class="flex items-center gap-3 mb-5">
             <div class="w-14 h-14 rounded-xl bg-orange/15 border border-orange/30 flex items-center justify-center text-2xl">
@@ -219,108 +217,67 @@
               <p class="text-xs text-orange">AI & ML Specialist</p>
             </div>
           </div>
-
-          <div class="space-y-2.5 text-xs">
-            <div class="flex justify-between py-1.5 border-b border-border/60">
-              <span class="text-muted">Village</span>
-              <span>Bhubaneswar</span>
+          <div class="space-y-2 text-xs">
+            <div class="flex justify-between py-1.5 border-b border-border/50">
+              <span class="text-muted">Village</span><span>Bhubaneswar</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-border/60">
-              <span class="text-muted">Rank</span>
-              <span>Genin → Chunin</span>
+            <div class="flex justify-between py-1.5 border-b border-border/50">
+              <span class="text-muted">Rank</span><span>Genin → Chunin</span>
             </div>
-            <div class="flex justify-between py-1.5 border-b border-border/60">
-              <span class="text-muted">Affiliation</span>
-              <span>CUTM · InternPe</span>
+            <div class="flex justify-between py-1.5 border-b border-border/50">
+              <span class="text-muted">Affiliation</span><span>CUTM · InternPe</span>
             </div>
             <div class="flex justify-between py-1.5">
-              <span class="text-muted">Specialty</span>
-              <span>RAG / Agents</span>
+              <span class="text-muted">Specialty</span><span>RAG / Agents</span>
             </div>
           </div>
         </div>
 
-        <!-- Skill bars + combat log style -->
+        <!-- Skill bars -->
         <div class="glass rounded-2xl p-5">
           <p class="text-sm font-semibold mb-4">Combat Readiness</p>
-          
-          <div class="space-y-4 mb-6">
+          <div class="space-y-4 mb-5">
             <div>
-              <div class="flex justify-between text-xs mb-1.5">
-                <span>Python & Machine Learning</span>
-                <span class="text-orange">92%</span>
-              </div>
-              <div class="h-2 bg-border rounded-full overflow-hidden">
-                <div class="skill-fill h-full rounded-full" style="width:92%"></div>
-              </div>
+              <div class="flex justify-between text-xs mb-1.5"><span>Python & Machine Learning</span><span class="text-orange">92%</span></div>
+              <div class="h-2 bg-border rounded-full overflow-hidden"><div class="skill-fill h-full rounded-full" style="width:92%"></div></div>
             </div>
             <div>
-              <div class="flex justify-between text-xs mb-1.5">
-                <span>RAG & Document AI</span>
-                <span class="text-orange">88%</span>
-              </div>
-              <div class="h-2 bg-border rounded-full overflow-hidden">
-                <div class="skill-fill h-full rounded-full" style="width:88%"></div>
-              </div>
+              <div class="flex justify-between text-xs mb-1.5"><span>RAG & Document AI</span><span class="text-orange">88%</span></div>
+              <div class="h-2 bg-border rounded-full overflow-hidden"><div class="skill-fill h-full rounded-full" style="width:88%"></div></div>
             </div>
             <div>
-              <div class="flex justify-between text-xs mb-1.5">
-                <span>Agents & MCP</span>
-                <span class="text-orange">85%</span>
-              </div>
-              <div class="h-2 bg-border rounded-full overflow-hidden">
-                <div class="skill-fill h-full rounded-full" style="width:85%"></div>
-              </div>
+              <div class="flex justify-between text-xs mb-1.5"><span>Agents & MCP</span><span class="text-orange">85%</span></div>
+              <div class="h-2 bg-border rounded-full overflow-hidden"><div class="skill-fill h-full rounded-full" style="width:85%"></div></div>
             </div>
             <div>
-              <div class="flex justify-between text-xs mb-1.5">
-                <span>Data Analysis & Storytelling</span>
-                <span class="text-orange">90%</span>
-              </div>
-              <div class="h-2 bg-border rounded-full overflow-hidden">
-                <div class="skill-fill h-full rounded-full" style="width:90%"></div>
-              </div>
+              <div class="flex justify-between text-xs mb-1.5"><span>Data Analysis & Storytelling</span><span class="text-orange">90%</span></div>
+              <div class="h-2 bg-border rounded-full overflow-hidden"><div class="skill-fill h-full rounded-full" style="width:90%"></div></div>
             </div>
             <div>
-              <div class="flex justify-between text-xs mb-1.5">
-                <span>Frontend (React + Tailwind)</span>
-                <span class="text-orange">78%</span>
-              </div>
-              <div class="h-2 bg-border rounded-full overflow-hidden">
-                <div class="skill-fill h-full rounded-full" style="width:78%"></div>
-              </div>
+              <div class="flex justify-between text-xs mb-1.5"><span>Frontend (React + Tailwind)</span><span class="text-orange">78%</span></div>
+              <div class="h-2 bg-border rounded-full overflow-hidden"><div class="skill-fill h-full rounded-full" style="width:78%"></div></div>
             </div>
           </div>
-
-          <div class="pt-4 border-t border-border/60">
+          <div class="pt-4 border-t border-border/50">
             <p class="text-[11px] text-muted mb-2">Recent Combat Log</p>
             <div class="space-y-1.5 text-xs">
-              <div class="flex justify-between">
-                <span class="text-muted">RAG Vision AI Assistant</span>
-                <span class="text-green-400">Completed</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-muted">MCP WebPilot</span>
-                <span class="text-green-400">Active</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-muted">SafeDrive AI</span>
-                <span class="text-green-400">Deployed</span>
-              </div>
+              <div class="flex justify-between"><span class="text-muted">RAG Vision AI Assistant</span><span class="text-green-400">Completed</span></div>
+              <div class="flex justify-between"><span class="text-muted">MCP WebPilot</span><span class="text-green-400">Active</span></div>
+              <div class="flex justify-between"><span class="text-muted">SafeDrive AI</span><span class="text-green-400">Deployed</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= S-RANK MISSIONS (exact table style) ================= -->
-    <section id="missions" class="mb-10">
+    <!-- ================= S-RANK MISSIONS ================= -->
+    <section id="missions" class="mb-9">
       <div class="flex items-center justify-between mb-5">
         <div>
           <p class="section-label mb-0.5">Mission Log</p>
           <h2 class="text-lg font-bold">S-Rank Missions</h2>
         </div>
-        <a href="https://github.com/abinash123hg?tab=repositories" target="_blank" class="text-sm text-orange hover:underline">
+        <a href="https://github.com/abinash123hg?tab=repositories" target="_blank" rel="noopener" class="text-sm text-orange hover:underline">
           All Missions →
         </a>
       </div>
@@ -339,51 +296,35 @@
             <tbody>
               <tr class="mission-row border-b border-border/40">
                 <td class="px-5 py-4">
-                  <a href="https://github.com/abinash123hg/retrieval-augmented-vision-ai-assistant" target="_blank" class="font-medium text-orange hover:underline">
-                    RAG Vision AI Assistant
-                  </a>
+                  <a href="https://github.com/abinash123hg/retrieval-augmented-vision-ai-assistant" target="_blank" rel="noopener" class="font-medium text-orange hover:underline">RAG Vision AI Assistant</a>
                 </td>
                 <td class="px-5 py-4 text-muted hidden md:table-cell">Local RAG + OCR with page-level citations</td>
                 <td class="px-5 py-4 text-xs">Python · RAG · OCR</td>
-                <td class="px-5 py-4 text-right">
-                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span>
-                </td>
+                <td class="px-5 py-4 text-right"><span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span></td>
               </tr>
               <tr class="mission-row border-b border-border/40">
                 <td class="px-5 py-4">
-                  <a href="https://github.com/abinash123hg/MCP-" target="_blank" class="font-medium text-orange hover:underline">
-                    MCP WebPilot
-                  </a>
+                  <a href="https://github.com/abinash123hg/MCP-" target="_blank" rel="noopener" class="font-medium text-orange hover:underline">MCP WebPilot</a>
                 </td>
                 <td class="px-5 py-4 text-muted hidden md:table-cell">Browser agent + MCP + Playwright + safety logs</td>
                 <td class="px-5 py-4 text-xs">MCP · Playwright</td>
-                <td class="px-5 py-4 text-right">
-                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span>
-                </td>
+                <td class="px-5 py-4 text-right"><span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span></td>
               </tr>
               <tr class="mission-row border-b border-border/40">
                 <td class="px-5 py-4">
-                  <a href="https://github.com/abinash123hg/document-understanding-agent" target="_blank" class="font-medium text-orange hover:underline">
-                    Document Understanding Agent
-                  </a>
+                  <a href="https://github.com/abinash123hg/document-understanding-agent" target="_blank" rel="noopener" class="font-medium text-orange hover:underline">Document Understanding Agent</a>
                 </td>
                 <td class="px-5 py-4 text-muted hidden md:table-cell">Handwritten & scanned document Q&A</td>
                 <td class="px-5 py-4 text-xs">Python · OCR · RAG</td>
-                <td class="px-5 py-4 text-right">
-                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span>
-                </td>
+                <td class="px-5 py-4 text-right"><span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Active</span></td>
               </tr>
               <tr class="mission-row">
                 <td class="px-5 py-4">
-                  <a href="https://github.com/abinash123hg/SafeDrive-AI-Real-Time-Road-Safety-Accident-Hotspot-Prediction-System" target="_blank" class="font-medium text-orange hover:underline">
-                    SafeDrive AI
-                  </a>
+                  <a href="https://github.com/abinash123hg/SafeDrive-AI-Real-Time-Road-Safety-Accident-Hotspot-Prediction-System" target="_blank" rel="noopener" class="font-medium text-orange hover:underline">SafeDrive AI</a>
                 </td>
                 <td class="px-5 py-4 text-muted hidden md:table-cell">Real-time accident hotspot prediction</td>
                 <td class="px-5 py-4 text-xs">Python · ML · Streamlit</td>
-                <td class="px-5 py-4 text-right">
-                  <span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Deployed</span>
-                </td>
+                <td class="px-5 py-4 text-right"><span class="text-[11px] px-2 py-0.5 rounded-full bg-green-500/10 text-green-400">Deployed</span></td>
               </tr>
             </tbody>
           </table>
@@ -392,7 +333,7 @@
     </section>
 
     <!-- ================= CONTRIBUTION VILLAGE ================= -->
-    <section class="mb-10">
+    <section class="mb-9">
       <p class="section-label mb-1">Village Report</p>
       <h2 class="text-lg font-bold mb-5">My Contribution Village</h2>
 
@@ -400,21 +341,21 @@
         <p class="text-sm text-muted text-center mb-5">
           Every commit raises another building. Slowly. Automatically. Every day.
         </p>
-
         <div class="mb-6">
           <img 
             src="https://github-readme-activity-graph.vercel.app/graph?username=abinash123hg&theme=react-dark&bg_color=060A12&color=FF7A1A&line=FF7A1A&point=FFFFFF&area=true&hide_border=true" 
             alt="Contribution Graph" 
             class="w-full rounded-xl"
+            loading="lazy"
           />
         </div>
-
         <div class="grid sm:grid-cols-2 gap-5">
           <div class="flex justify-center">
             <img 
               src="https://github-readme-stats.vercel.app/api?username=abinash123hg&show_icons=true&theme=radical&hide_border=true&bg_color=0C1424&title_color=FF7A1A&icon_color=FF7A1A&text_color=E8EEF7" 
               alt="GitHub Stats" 
               class="rounded-xl max-w-full"
+              loading="lazy"
             />
           </div>
           <div class="flex justify-center">
@@ -422,6 +363,7 @@
               src="https://github-readme-stats.vercel.app/api/top-langs/?username=abinash123hg&layout=compact&theme=radical&hide_border=true&bg_color=0C1424&title_color=FF7A1A&text_color=E8EEF7" 
               alt="Top Languages" 
               class="rounded-xl max-w-full"
+              loading="lazy"
             />
           </div>
         </div>
@@ -432,19 +374,17 @@
     <section class="mb-8">
       <div class="glass rounded-2xl p-8 text-center relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-br from-orange/8 via-transparent to-transparent pointer-events-none"></div>
-        
         <div class="relative">
           <p class="section-label mb-2">Call to Action</p>
           <h2 class="text-2xl sm:text-3xl font-bold mb-3">Let's build something legendary</h2>
           <p class="text-muted text-sm max-w-md mx-auto mb-7">
             Looking for collaborators, internships, or just want to talk practical AI systems? Reach out.
           </p>
-          
           <div class="flex flex-wrap justify-center gap-3">
-            <a href="https://github.com/abinash123hg" target="_blank" class="px-6 py-2.5 rounded-lg bg-orange text-dark font-semibold text-sm hover:brightness-110 transition orange-glow">
+            <a href="https://github.com/abinash123hg" target="_blank" rel="noopener" class="px-6 py-2.5 rounded-lg bg-orange text-dark font-semibold text-sm hover:brightness-110 transition orange-glow">
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/abinash-swain-a941a3330/" target="_blank" class="px-6 py-2.5 rounded-lg border border-border text-sm hover:border-orange/40 transition">
+            <a href="https://www.linkedin.com/in/abinash-swain-a941a3330/" target="_blank" rel="noopener" class="px-6 py-2.5 rounded-lg border border-border text-sm hover:border-orange/40 transition">
               LinkedIn
             </a>
             <a href="mailto:swainabinash839@gmail.com" class="px-6 py-2.5 rounded-lg border border-border text-sm hover:border-orange/40 transition">
